@@ -1,0 +1,55 @@
+/*Selector hijo directo */
+.menu1 > .menu-item {
+  color:red
+}
+
+#mi-menu-id > div > .menu-item {
+  color:blue
+}
+
+/*Selector cualquier descendiente */
+#mi-menu-id  span {
+  color: orange
+}
+
+
+/*Selector hermanos just adjacente*/
+#former { 
+ background-color: red;
+}
+
+#former + div {
+  background-color: yellow;
+}
+
+/*Poner a varios selectores el mismo CSS a la vez*/
+ul,
+span {
+  font-weight: bold
+}
+
+a[href*="hack"] {
+  color: green;
+}
+a {
+  display: block;
+}
+
+/* All elements have the same font family */
+* {font-family: Arial;}
+
+/* All spans with a "lang" attribute are bold */
+span[lang] {font-weight:bold;}
+ 
+/* All spans in Portuguese are green */
+span[lang="pt"] {color:#20b2aa;}
+
+/* All spans in Italian are blue  */
+span[lang~="it"] {color: #1d7fd4;}
+
+/* Any span in Chinese is red, matches
+   simplified (zh-CN) or traditional (zh-TW) */
+span[lang|="zh"] {color: red;}
+
+/* All internal links have a gold background */
+a[href^="#"] {background-color: gold;}
